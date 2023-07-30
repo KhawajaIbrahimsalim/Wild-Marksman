@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dbee01b0a36aa7f4d83a0c6597f6d3ad
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Neon Energy x
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c790172f64973ca44ae0defa32156e82, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

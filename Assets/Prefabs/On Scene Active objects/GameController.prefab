@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3668029533240524099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3668029533240524097}
+  - component: {fileID: 3668029533240524102}
+  - component: {fileID: 3668029533100220604}
+  - component: {fileID: 3668029533100220607}
+  - component: {fileID: 3668029533100220610}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3668029533240524097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 179.9784, y: 87.6452, z: -8.257504}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3668029533240524102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c656e53cf8f5d64a86d96c279cd04ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 7193616620108418744, guid: 8e73f3ef0654e044b869202a0f9d8d95, type: 3}
+  SpawnDelay: 1
+  SpawnPos: 300
+  SpawnLimit: 30
+  SpawnCount: 0
+--- !u!114 &3668029533100220604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1b406feafa50a4c87d23c3aafa8238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Void: {fileID: 346128225971854973, guid: 3095bf65c5ea89447aef6b7d8a4d63dc, type: 3}
+  SpawnPos: 450
+  BackGround_SR: {fileID: 0}
+  SpawnLimit: 5
+  Void_Destroy_Distance: 1000
+  _void: []
+--- !u!114 &3668029533100220607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f212098be764c744e8dc509851eb9c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceLimit: 1200
+  ReSpawnParticle: {fileID: 6349355260695200307, guid: 5c9d4d41cb401dc48a138a529989fd68, type: 3}
+--- !u!114 &3668029533100220610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec7532633f163d744bae82dd0ad34576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaveLimit: 2
+  WaveCount: 1
+  Wave_txt: {fileID: 0}
+  WaveTextShow_Delay: 5
+  WaveTime: 30
+  Time_txt: {fileID: 0}
+  Credit_txt: {fileID: 0}
+  UpgradeTime: 10
+  GetReady_txt: {fileID: 0}
+  UpgradeOptions_Panel: {fileID: 0}
+  GameController: {fileID: 3668029533240524099}
+  Boss: {fileID: 0}
+  BossHealthBar: {fileID: 0}
+  PlayerHealthBar: {fileID: 0}
