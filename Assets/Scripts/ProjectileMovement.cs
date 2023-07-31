@@ -21,6 +21,8 @@ public class ProjectileMovement : MonoBehaviour
 
     void MoveProjectile()
     {
-        transform.position += transform.up * Time.deltaTime * Projectile_Speed;
+        Vector2 DirectionalForce = transform.up * Time.deltaTime * Projectile_Speed;
+
+        GetComponent<Rigidbody2D>().velocity += DirectionalForce;
     }
 }
