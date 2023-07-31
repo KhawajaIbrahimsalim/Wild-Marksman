@@ -335,6 +335,7 @@ GameObject:
   - component: {fileID: 7193616619638728648}
   - component: {fileID: 463163180}
   - component: {fileID: 463163182}
+  - component: {fileID: 1074560494}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -461,8 +462,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21a9b1924e1261b4183ac35a7178a705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: 10000
-  MoveSpeed: 5200
+  joystick: {fileID: 0}
+  joystick_Move_Handle: {fileID: 0}
+  PlayerMaxHealth: 200
+  PlayerHealth: 20
+  PlayerHealthBar: {fileID: 0}
+  MoveSpeed: 9000
+  VoidSpeed: 2600
+  AttractionSpeed: 0.01
+  UpgradePanel: {fileID: 0}
 --- !u!114 &463163180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30436d7fcb220244eb92e392fa6e7589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
   MainCamera: {fileID: 0}
 --- !u!114 &463163182
 MonoBehaviour:
@@ -494,6 +503,22 @@ MonoBehaviour:
   DelayFor_SpecialAttack: 2
   SpecialAttack_ColorChange: {fileID: 332034257}
   Gun_SpecialAttack_ColorChange: {fileID: 588793841}
+  joystick: {fileID: 0}
+  DelayFor_SimpleAttack: 0.2
+  joystick_Shoot_Handle: {fileID: 0}
+--- !u!114 &1074560494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3325702668696400828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94d1a4747b50e944aad055ed117e0f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShieldActive_Delay: 0
 --- !u!1 &3325702668716069552
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,7 +616,7 @@ GameObject:
   - component: {fileID: 3325702668802303626}
   - component: {fileID: 332034257}
   m_Layer: 7
-  m_Name: Light 2D
+  m_Name: Main Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
