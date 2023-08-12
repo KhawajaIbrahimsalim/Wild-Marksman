@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageIncrease_PickupEffect : MonoBehaviour
@@ -16,12 +14,6 @@ public class DamageIncrease_PickupEffect : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,11 +36,8 @@ public class DamageIncrease_PickupEffect : MonoBehaviour
                 // Set Parent as Player
                 _DamageIncreaseFire.transform.parent = Player.transform;
 
-                // Set Local rotation to ZERO
-                _DamageIncreaseFire.transform.localRotation = new Quaternion(0, 0, 0, 0);
-
-                // Set Local position as ZERO to locate directly onto the Player
-                _DamageIncreaseFire.transform.localPosition = new Vector3(0, 0, 0);
+                // Set Local position as ZERO to locate directly onto the Player AND set local rotation to ZERO
+                _DamageIncreaseFire.transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
             }
         }
     }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class DamageFor_P_Projectile : MonoBehaviour
 {
     [Header("Hit Properties:")]
-    [SerializeField] public float ProjectileDamage;
+    public float ProjectileDamage;
     [SerializeField] private ParticleSystem HitParticle;
 
     [Header("Death Particle Effects:")]
@@ -39,12 +39,12 @@ public class DamageFor_P_Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Set Particle System according to tag
-        if (other.tag == "Boss")
+        if (other.CompareTag("Boss"))
         {
             DeathParticle = Boss_DeathParticle;
         }
 
-        else if (other.tag == "Enemy")
+        else if (other.CompareTag("Enemy"))
         {
             DeathParticle = Enemy_DeathParticle;
         }

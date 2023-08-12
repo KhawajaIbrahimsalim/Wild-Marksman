@@ -31,6 +31,8 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private GameObject Retry_btn;
     [SerializeField] private GameObject PauseGame_Panel;
     [SerializeField] private GameObject P_SpecialAttack_btn;
+    [SerializeField] private GameObject ShieldActive_Delay_txt;
+    [SerializeField] private GameObject DamageIncreaseActive_Delay_txt;
 
     [Header("Kill Point Properties:")]
     [SerializeField] private long TotalPoints;
@@ -44,7 +46,9 @@ public class WaveManager : MonoBehaviour
 
     [Header("Reset Properties:")]
     [SerializeField] private GameObject P_SimpleProjectile;
+    [SerializeField] private float DefaultValue_1;
     [SerializeField] private GameObject P_SpecialProjectile;
+    [SerializeField] private float DefaultValue_2;
 
     [Header("Required Kills Properties:")]
     [SerializeField] private float RequiredKills;
@@ -66,10 +70,10 @@ public class WaveManager : MonoBehaviour
     private bool IfTimeIsUp;
     private GameObject[] Remainig_Enemy;
     private float Temp_WaveTextShow_Delay;
-    private float P_SimpleProjectile_ResetDamage;
-    private float P_SpecialProjectile_ResetDamage;
     private bool IsKillsFullied;
     private bool IsPaused;
+    private GameObject[] PickUpEffects;
+    private GameObject[] PickUpItems;
 
     // Start is called before the first frame update
     void Start()
@@ -90,8 +94,8 @@ public class WaveManager : MonoBehaviour
         EnemyPoints = 0;
         BossPoints = 0;
 
-        P_SimpleProjectile_ResetDamage = P_SimpleProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage;
-        P_SpecialProjectile_ResetDamage = P_SpecialProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage;
+        P_SimpleProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = DefaultValue_1;
+        P_SpecialProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = DefaultValue_2;
 
         KillsNeeded_txt.text = "Kills Needed: " + NoOfKills + " / " + RequiredKills;
     }
@@ -99,6 +103,12 @@ public class WaveManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Find All Pick Up Effects
+        PickUpEffects = GameObject.FindGameObjectsWithTag("Pick Up Effects");
+
+        // Find All Pick Up items
+        PickUpItems = GameObject.FindGameObjectsWithTag("PickUp");
+
         // If Player want to Pause the Game
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -220,20 +230,33 @@ public class WaveManager : MonoBehaviour
             {
                 if (Player != null)
                 {
+                    // Destroy all Pick Up items
+                    foreach (var item in PickUpItems)
+                    {
+                        Destroy(item);
+                    }
+
+                    // Destroy all Effects on Player by Pick up items
+                    foreach (var Effects in PickUpEffects)
+                    {
+                        Destroy(Effects);
+                    }
+
+                    // Disable PickUpItemSpawning Component
+                    GetComponent<PickUpItemSpawning>().enabled = false;
+
+                    // Disable Pick-Up items Delay Text
+                    ShieldActive_Delay_txt.SetActive(false);
+                    DamageIncreaseActive_Delay_txt.SetActive(false);
+
                     // Check if Killed the required kills
                     if (NoOfKills < RequiredKills)
                     {
-                        // Call LoseBehaviour() function this will disable all the Important functionalities
-                        BehaviourAfterLOST();
-
-                        // Disable P_ProjectileSpawn
-                        Player.GetComponent<P_ProjectileSpawn>().enabled = false;
-
-                        // Stop the PlayerMovement
-                        Player.GetComponent<PlayerMovement>().MoveSpeed = 0;
-
                         // And IsKillsFullied to false, mean Player failed to do the required kills
                         IsKillsFullied = false;
+
+                        // Call LoseBehaviour() function this will disable all the Important functionalities
+                        BehaviourAfterLOST();
                     }
 
                     // Need Required kills to move to the next wave
@@ -283,7 +306,7 @@ public class WaveManager : MonoBehaviour
 
                         if (UpgradeTime <= 0.0f)
                         {
-                            // By making it false now the if condition will execute and not else, means 
+                            // By making it false now the "if condition" will execute and not "else", means 
                             // WaveTime will Start
                             IfTimeIsUp = false;
 
@@ -331,6 +354,9 @@ public class WaveManager : MonoBehaviour
 
                                 // Show RequiredKills
                                 KillsNeeded_txt.text = "Kills Needed: " + NoOfKills + " / " + RequiredKills;
+
+                                // Disable PickUpItemSpawning Component
+                                GetComponent<PickUpItemSpawning>().enabled = true;
                             }
 
                             // UpgradeTime is Refilled
@@ -362,9 +388,33 @@ public class WaveManager : MonoBehaviour
 
     private void BehaviourAfterLOST()
     {
-        // Reset Projectile Damage Because Game is Ended
-        P_SimpleProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = P_SimpleProjectile_ResetDamage;
-        P_SpecialProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = P_SpecialProjectile_ResetDamage;
+        // Destroy all Pick Up items
+        foreach (var item in PickUpItems)
+        {
+            Destroy(item);
+        }
+
+        // Destroy all Effects on Player by Pick up items
+        foreach (var Effects in PickUpEffects)
+        {
+            Destroy(Effects);
+        }
+
+        // Disable Pick-Up items Delay Text
+        ShieldActive_Delay_txt.SetActive(false);
+        DamageIncreaseActive_Delay_txt.SetActive(false);
+
+        // Disable PickUpItemSpawning Component
+        GetComponent<PickUpItemSpawning>().enabled = false;
+
+        if (Player)
+        {
+            // Disable P_ProjectileSpawn
+            Player.GetComponent<P_ProjectileSpawn>().enabled = false;
+
+            // Stop the PlayerMovement
+            Player.GetComponent<PlayerMovement>().MoveSpeed = 0;
+        }
 
         // Disable GameController
         gameObject.SetActive(false);
@@ -402,23 +452,41 @@ public class WaveManager : MonoBehaviour
 
     private void BehaviourAfterWIN()
     {
-        // Disable P_ProjectileSpawn
-        Player.GetComponent<P_ProjectileSpawn>().enabled = false;
+        // Destroy all Pick Up items
+        foreach (var item in PickUpItems)
+        {
+            Destroy(item);
+        }
 
-        // Stop the PlayerMovement
-        Player.GetComponent<PlayerMovement>().MoveSpeed = 0;
+        // Destroy all Effects on Player by Pick up items
+        foreach (var Effects in PickUpEffects)
+        {
+            Destroy(Effects);
+        }
 
-        // Reset Projectile Damage Because Game is Ended
-        P_SimpleProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = P_SimpleProjectile_ResetDamage;
-        P_SpecialProjectile.GetComponent<DamageFor_P_Projectile>().ProjectileDamage = P_SpecialProjectile_ResetDamage;
+        // Disable Pick-Up items Delay Text
+        ShieldActive_Delay_txt.SetActive(false);
+        DamageIncreaseActive_Delay_txt.SetActive(false);
+
+        // Disable PickUpItemSpawning Component
+        GetComponent<PickUpItemSpawning>().enabled = false;
+
+        if (Player)
+        {
+            // Disable P_ProjectileSpawn
+            Player.GetComponent<P_ProjectileSpawn>().enabled = false;
+
+            // Stop the PlayerMovement
+            Player.GetComponent<PlayerMovement>().MoveSpeed = 0;
+        }
 
         // By killing the Boss Player will get 200 points
         BossPoints += 1000;
 
         // Destroy Remaining Enemies
-        foreach (var item in Remainig_Enemy)
+        foreach (var enemy in Remainig_Enemy)
         {
-            Destroy(item);
+            Destroy(enemy);
         }
 
         // Disable GameController

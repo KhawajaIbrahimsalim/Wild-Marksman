@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
     private float Temp_Sped;
+    private GameObject GameController;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +38,20 @@ public class PlayerMovement : MonoBehaviour
         PlayerHealth = PlayerMaxHealth;
 
         Time.timeScale = 1;
+
+        GameController = GameObject.Find("GameController");
     }
 
+    [System.Obsolete]
     private void Update()
     {
+        // This condition will only be true when Player is unable to do the required kill in a given time
+        if (GameController.active == false)
+        {
+            // Don't Let the Player Destroyed
+            PlayerHealth = PlayerMaxHealth;
+        }
+
         PlayerHealthBar.value = PlayerHealth / PlayerMaxHealth;
     }
 
@@ -48,9 +59,6 @@ public class PlayerMovement : MonoBehaviour
     [System.Obsolete]
     void FixedUpdate()
     {
-        //float Horizontal = Input.GetAxis("Horizontal");
-        //float Vertical = Input.GetAxis("Vertical");
-
         if (UpgradePanel.active == true)
         {
             Temp_Sped = 0;

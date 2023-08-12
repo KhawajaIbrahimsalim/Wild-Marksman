@@ -11,6 +11,7 @@ TagManager:
   - FxTemporaire
   - Void
   - PickUp
+  - Pick Up Effects
   layers:
   - Default
   - TransparentFX
