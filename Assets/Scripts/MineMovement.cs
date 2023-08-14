@@ -24,14 +24,12 @@ public class MineMovement : MonoBehaviour
 
         if (positionRandom <= 0)
         {
-            rb.AddForce(transform.up * Time.deltaTime * MineSpeed, ForceMode2D.Force);
+            rb.AddForce(MineSpeed * Time.deltaTime * transform.up, ForceMode2D.Force);
         }
 
         else if (positionRandom > 0)
         {
-            rb.AddForce(transform.right * Time.deltaTime * MineSpeed, ForceMode2D.Force);
+            rb.AddForce(MineSpeed * Time.deltaTime * transform.right, ForceMode2D.Force);
         }
     }
 }
-
-//transform.position += transform.up * Time.deltaTime * MineSpeed;

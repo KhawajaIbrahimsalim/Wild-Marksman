@@ -271,6 +271,9 @@ public class WaveManager : MonoBehaviour
 
                         // Pre-Requirements:
                         {
+                            // To stop holding the button automatically even after UpgradeTime
+                            Player.GetComponent<P_ProjectileSpawn>().OnButtonUp();
+
                             // Destroy Remaining Enemies
                             foreach (var item in Remainig_Enemy)
                             {

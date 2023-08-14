@@ -4,12 +4,6 @@ public class ProjectileMovement : MonoBehaviour
 {
     [SerializeField] private float Projectile_Speed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -21,8 +15,8 @@ public class ProjectileMovement : MonoBehaviour
 
     void MoveProjectile()
     {
-        Vector2 DirectionalForce = transform.up * Time.deltaTime * Projectile_Speed;
+        Vector2 DirectionalForce = Projectile_Speed * Time.deltaTime * transform.up;
 
-        GetComponent<Rigidbody2D>().velocity += DirectionalForce;
+        transform.Translate(DirectionalForce, Space.World);
     }
 }

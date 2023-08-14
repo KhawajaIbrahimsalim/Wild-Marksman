@@ -71,7 +71,7 @@ public class P_ProjectileSpawn : MonoBehaviour
             SpecialAttack_ColorChange.SetBool("IsIdol", true);
         }
 
-        else if (IsPressed/* || Input.GetKey("mouse 1")*/)
+        else if (IsPressed /* || Input.GetKey("mouse 1")*/)
         {
             DelayFor_SpecialAttack -= Time.deltaTime;
 
