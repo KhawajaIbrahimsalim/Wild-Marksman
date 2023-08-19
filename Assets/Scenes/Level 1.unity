@@ -747,7 +747,7 @@ PrefabInstance:
       objectReference: {fileID: 1687031454}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: WaveTime
-      value: 10
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Wave_txt
@@ -791,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 390619405}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: RequiredKills
-      value: 0
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: joystick_Move
@@ -1388,6 +1388,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 12.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2100991005, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e3944999c8e3a6f40b8902f557a5709a, type: 3}
+    - target: {fileID: 2100991005, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100991005, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100991005, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2100991007, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1565,7 +1581,8 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 126422325, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
