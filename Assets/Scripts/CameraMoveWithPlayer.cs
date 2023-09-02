@@ -6,6 +6,11 @@ public class CameraMoveWithPlayer : MonoBehaviour
 
     private GameObject Player;
 
+    private void Awake()
+    {
+        transform.position = new Vector3(0, 0, -10);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

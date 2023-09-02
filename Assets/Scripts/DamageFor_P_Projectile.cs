@@ -1,3 +1,4 @@
+using EZCameraShake;
 using UnityEngine;
 
 public class DamageFor_P_Projectile : MonoBehaviour
@@ -52,6 +53,8 @@ public class DamageFor_P_Projectile : MonoBehaviour
         // For P_Projectile to damage the Enemy
         if (other.CompareTag("Enemy") || other.CompareTag("Boss"))
         {
+            CameraShake();
+
             other.gameObject.GetComponent<EnemyFollow>().EnemyHealth -= ProjectileDamage;
 
             if (other.gameObject.GetComponent<EnemyFollow>().EnemyHealth <= 0)
@@ -62,5 +65,10 @@ public class DamageFor_P_Projectile : MonoBehaviour
 
             IsHit = true;
         }
+    }
+
+    private void CameraShake()
+    {
+        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RotateWithMouse : MonoBehaviour
+public class RotateWithJoyStick : MonoBehaviour
 {
     [Header("Joystick Properties:")]
     public FloatingJoystick joystick;
@@ -17,11 +17,11 @@ public class RotateWithMouse : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // Player will face towards the mouse
-        FacingMouse();
+        // Player will face towards the JoyStick
+        FacingJoyStick();
     }
 
-    void FacingMouse()
+    void FacingJoyStick()
     {
         // Get the position of the mouse
         //Vector3 MousePosition = Input.mousePosition;

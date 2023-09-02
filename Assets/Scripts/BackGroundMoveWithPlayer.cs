@@ -20,7 +20,7 @@ public class BackGroundMoveWithPlayer : MonoBehaviour
         {
             // Move to the location of the player
             Vector3 NewPos = new Vector3(Player.transform.position.x, Player.transform.position.y);
-            Vector3 FollowValue = transform.position = Vector3.Slerp(transform.position, NewPos, FollowSpeed * Time.deltaTime);
+            transform.position = Vector3.Slerp(transform.position, NewPos, FollowSpeed * Time.deltaTime);
         }
     }
 }

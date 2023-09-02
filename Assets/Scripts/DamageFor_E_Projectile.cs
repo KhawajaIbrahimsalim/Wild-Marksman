@@ -1,3 +1,4 @@
+using EZCameraShake;
 using UnityEngine;
 
 public class DamageFor_E_Projectile : MonoBehaviour
@@ -44,6 +45,8 @@ public class DamageFor_E_Projectile : MonoBehaviour
         // For E_Projectile to damage the Player
         if (other.tag == "Player")
         {
+            CameraShake();
+
             other.gameObject.GetComponent<PlayerMovement>().PlayerHealth -= ProjectileDamage;
 
             if (other.gameObject.GetComponent<PlayerMovement>().PlayerHealth <= 0)
@@ -54,5 +57,10 @@ public class DamageFor_E_Projectile : MonoBehaviour
 
             IsHit = true;
         }
+    }
+
+    private void CameraShake()
+    {
+        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
     }
 }

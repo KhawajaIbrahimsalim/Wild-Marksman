@@ -16,6 +16,17 @@ public class SceneLoader : MonoBehaviour
 
     public void Play()
     {
+        StartCoroutine(PlayLoad());
+    }
+
+    public IEnumerator PlayLoad()
+    {
+        LoadingPanel.SetActive(true);
+
+        Panel.SetActive(false);
+
+        yield return new WaitForSeconds(LoadingDelay);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
