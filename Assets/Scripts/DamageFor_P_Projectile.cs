@@ -24,6 +24,8 @@ public class DamageFor_P_Projectile : MonoBehaviour
 
             IsHit = false;
 
+            Destroy(gameObject, 1f);
+
             gameObject.SetActive(false);
         }
 
@@ -53,12 +55,12 @@ public class DamageFor_P_Projectile : MonoBehaviour
         // For P_Projectile to damage the Enemy
         if (other.CompareTag("Enemy") || other.CompareTag("Boss"))
         {
-            CameraShake();
-
             other.gameObject.GetComponent<EnemyFollow>().EnemyHealth -= ProjectileDamage;
 
             if (other.gameObject.GetComponent<EnemyFollow>().EnemyHealth <= 0)
             {
+                CameraShake();
+
                 Enemy = other.gameObject;
                 IsDead = true;
             }

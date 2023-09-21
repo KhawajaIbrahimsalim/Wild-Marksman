@@ -12,6 +12,7 @@ TagManager:
   - Void
   - PickUp
   - Pick Up Effects
+  - Boss Impact Attack
   layers:
   - Default
   - TransparentFX

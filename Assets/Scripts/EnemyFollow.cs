@@ -45,7 +45,7 @@ public class EnemyFollow : MonoBehaviour
 
         FollowSpeed = Random.Range(MinSpeed, MaxSpeed);
 
-        if (tag == "Boss")
+        if (CompareTag("Boss"))
         {
             FollowSpeed = Boss_FollowSpeed;
         }
@@ -61,7 +61,7 @@ public class EnemyFollow : MonoBehaviour
     void FixedUpdate()
     {
         // Show Boss Health
-        if (tag == "Boss")
+        if (CompareTag("Boss"))
         {
             BossHealthBar.value = EnemyHealth / BossMaxHealth;
         }
@@ -92,7 +92,7 @@ public class EnemyFollow : MonoBehaviour
                 if (E_SimpleProjectile != null && FireDelay <= 0.0f)
                 {
                     // Enemy_Boss
-                    if (this.gameObject.tag == "Boss")
+                    if (gameObject.CompareTag("Boss"))
                     {
                         if (bitDelay <= 0.0f && FireDelay <= 0.0f) // Delay between each shot after main Delay (means: Delay inside a Delay)
                         {
@@ -130,11 +130,11 @@ public class EnemyFollow : MonoBehaviour
             }
 
             // Mines Attack
-            if (this.gameObject.tag == "Boss")
+            if (gameObject.CompareTag("Boss"))
             {
                 if (MineSpawnDelay <= 0.0f)
                 {
-                        MinesAttack();
+                    MinesAttack();
 
                     // Refill the MineSpawnDelay
                     MineSpawnDelay = Temp_MineSpawnDelay;
@@ -162,7 +162,12 @@ public class EnemyFollow : MonoBehaviour
     {
         foreach (var Mines_SpawnPoint in MinesSpawnPoint)
         {
-            Instantiate(E_Mine, Mines_SpawnPoint.transform.position, transform.rotation);
+            GameObject BossAttackParticle = Instantiate(E_Mine, Mines_SpawnPoint.transform.position, transform.rotation);
+
+            if (BossAttackParticle.CompareTag("Boss Impact Attack"))
+            {
+                BossAttackParticle.transform.SetParent(gameObject.transform);
+            }
         }
     }
 }

@@ -18,14 +18,31 @@ public class DamageFor_E_Projectile : MonoBehaviour
     {
         if (IsHit)
         {
-            // Instantiate the  Hit Particle
-            Instantiate(HitParticle, transform.position, transform.rotation);
+            if (CompareTag("Boss Impact Attack"))
+            {
+                // Instantiate the  Hit Particle
+                ParticleSystem hitParticle = Instantiate(HitParticle, Player.transform.position, Player.transform.rotation);
 
-            IsHit = false;
+                hitParticle.transform.SetParent(Player.transform);
 
-            // Disable this projectile and so it can't be seen and the Particle Effect is inialized
-            // before the object is destroyed.
-            gameObject.SetActive(false);
+                IsHit = false;
+
+                Debug.Log("Here");
+            }
+
+            else
+            {
+                // Instantiate the  Hit Particle
+                Instantiate(HitParticle, transform.position, transform.rotation);
+
+                IsHit = false;
+
+                Destroy(gameObject, 1f);
+
+                // Disable this projectile and so it can't be seen and the Particle Effect is inialized
+                // before the object is destroyed.
+                gameObject.SetActive(false);
+            }
         }
 
         if (IsDead)
@@ -43,15 +60,16 @@ public class DamageFor_E_Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // For E_Projectile to damage the Player
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            CameraShake();
-
             other.gameObject.GetComponent<PlayerMovement>().PlayerHealth -= ProjectileDamage;
+
+            Player = other.gameObject;
 
             if (other.gameObject.GetComponent<PlayerMovement>().PlayerHealth <= 0)
             {
-                Player = other.gameObject;
+                CameraShake();
+
                 IsDead = true;
             }
 
