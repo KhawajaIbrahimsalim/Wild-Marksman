@@ -68,17 +68,22 @@ public class DamageFor_E_Projectile : MonoBehaviour
 
             if (other.gameObject.GetComponent<PlayerMovement>().PlayerHealth <= 0)
             {
-                CameraShake();
+                CameraShake(2f, 2f);
 
                 IsDead = true;
+            }
+
+            if (CompareTag("Boss_Special Attack"))
+            {
+                CameraShake(4f, 4f);
             }
 
             IsHit = true;
         }
     }
 
-    private void CameraShake()
+    private void CameraShake(float Magnitude, float Roughness)
     {
-        CameraShaker.Instance.ShakeOnce(2f, 2f, .1f, 1f);
+        CameraShaker.Instance.ShakeOnce(Magnitude, Roughness, .1f, 1f);
     }
 }

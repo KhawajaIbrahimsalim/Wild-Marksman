@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7617025145899211578}
   - component: {fileID: -1399383945692351134}
   m_Layer: 0
-  m_Name: Boss Attack (Impact)
+  m_Name: Boss_Attack (Impact)
   m_TagString: Boss Impact Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

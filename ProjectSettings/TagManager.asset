@@ -13,6 +13,7 @@ TagManager:
   - PickUp
   - Pick Up Effects
   - Boss Impact Attack
+  - Boss_Special Attack
   layers:
   - Default
   - TransparentFX

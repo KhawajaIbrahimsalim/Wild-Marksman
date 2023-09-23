@@ -12,19 +12,18 @@ public class EnemyFollow : MonoBehaviour
     [SerializeField] private GameObject[] E_ProjectileSpawnPoint;
     [SerializeField] private float FireDelay;
 
-    [Header("Boss Simple and Mines Attack Properties:")]
+    [Header("Boss Simple and Special Attack Properties:")]
     [SerializeField] float bitDelay;
-    [SerializeField] private GameObject E_Mine;
-    [SerializeField] private GameObject[] MinesSpawnPoint;
-    [SerializeField] private float MineSpawnDelay;
+    [SerializeField] private GameObject E_Special;
+    [SerializeField] private GameObject[] SpecialAttacks_SpawnPoint;
+    [SerializeField] private float SpecialAttacks_SpawnDelay;
 
-    private float Temp_MineSpawnDelay;
+    private float Temp_SpecialAttacks_MineSpawnDelay;
     private float Temp_FireDelay;
     private float Temp_bitDelay;
     // Summary:
     // Stores the number of shots the Boss enemy shoot.
     private float CountFire;
-
 
     [Header("Follow Properties:")]
     public float MaxSpeed;
@@ -52,7 +51,7 @@ public class EnemyFollow : MonoBehaviour
 
         Temp_FireDelay = FireDelay;
         Temp_bitDelay = bitDelay;
-        Temp_MineSpawnDelay = MineSpawnDelay;
+        Temp_SpecialAttacks_MineSpawnDelay = SpecialAttacks_SpawnDelay;
 
         BossMaxHealth = EnemyHealth;
     }
@@ -132,16 +131,16 @@ public class EnemyFollow : MonoBehaviour
             // Mines Attack
             if (gameObject.CompareTag("Boss"))
             {
-                if (MineSpawnDelay <= 0.0f)
+                if (SpecialAttacks_SpawnDelay <= 0.0f)
                 {
-                    MinesAttack();
+                    Boss_SpecialAttack();
 
-                    // Refill the MineSpawnDelay
-                    MineSpawnDelay = Temp_MineSpawnDelay;
+                    // Refill the SpecialAttacks_SpawnDelay
+                    SpecialAttacks_SpawnDelay = Temp_SpecialAttacks_MineSpawnDelay;
                 }
             }
 
-            MineSpawnDelay -= Time.deltaTime;
+            SpecialAttacks_SpawnDelay -= Time.deltaTime;
 
             FireDelay -= Time.deltaTime;
         }
@@ -158,12 +157,13 @@ public class EnemyFollow : MonoBehaviour
         CountFire++;
     }
 
-    void MinesAttack()
+    void Boss_SpecialAttack()
     {
-        foreach (var Mines_SpawnPoint in MinesSpawnPoint)
+        foreach (var Mines_SpawnPoint in SpecialAttacks_SpawnPoint)
         {
-            GameObject BossAttackParticle = Instantiate(E_Mine, Mines_SpawnPoint.transform.position, transform.rotation);
+            GameObject BossAttackParticle = Instantiate(E_Special, Mines_SpawnPoint.transform.position, transform.rotation);
 
+            // So that it won't seperate from the Boss Main body
             if (BossAttackParticle.CompareTag("Boss Impact Attack"))
             {
                 BossAttackParticle.transform.SetParent(gameObject.transform);

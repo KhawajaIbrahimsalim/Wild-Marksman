@@ -159,8 +159,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.14964998, y: -0.0031499863, z: 0}
-    m_Extent: {x: 1.25255, y: 1.20955, z: 0}
+    m_Center: {x: 0.15130001, y: 0.00080001354, z: 0}
+    m_Extent: {x: 1.2616999, y: 1.2046, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -272,8 +272,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.14345002, y: -0.0065000057, z: 0}
-    m_Extent: {x: 1.25485, y: 1.2083, z: 0}
+    m_Center: {x: 0.15285003, y: -0.006950021, z: 0}
+    m_Extent: {x: 1.25475, y: 1.20165, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6430575667478397641
 Transform:
   m_ObjectHideFlags: 0
@@ -794,7 +794,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6430575667478397645}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -870,13 +870,9 @@ MonoBehaviour:
   - {fileID: 5874720327889845309}
   FireDelay: 3
   bitDelay: 0.22
-  E_Mine: {fileID: 8290969379808069710, guid: 0cd7d119326e6544cb3187df00c78d1c, type: 3}
-  MinesSpawnPoint:
-  - {fileID: 4274128571796451235}
-  - {fileID: 4986742238846895362}
-  - {fileID: 5429173637854977352}
-  - {fileID: 7227006366619474315}
-  MineSpawnDelay: 5
+  E_Special: {fileID: 0}
+  SpecialAttacks_SpawnPoint: []
+  SpecialAttacks_SpawnDelay: 0
   MaxSpeed: 0
   MinSpeed: 0
   FollowSpeed: 100
@@ -979,8 +975,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.15195, y: -0.0060499907, z: 0}
-    m_Extent: {x: 1.25465, y: 1.20015, z: 0}
+    m_Center: {x: 0.15224999, y: -0.007349968, z: 0}
+    m_Extent: {x: 1.2567501, y: 1.20785, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1092,8 +1088,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.148, y: 0.002750039, z: 0}
-    m_Extent: {x: 1.2629, y: 1.20515, z: 0}
+    m_Center: {x: 0.14540005, y: 0.001249969, z: 0}
+    m_Extent: {x: 1.2565, y: 1.2063501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

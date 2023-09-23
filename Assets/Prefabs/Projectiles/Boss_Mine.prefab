@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9157496599461933345}
   - component: {fileID: -623787535463709241}
   m_Layer: 0
-  m_Name: E_Mine
+  m_Name: Boss_Mine
   m_TagString: E_Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
