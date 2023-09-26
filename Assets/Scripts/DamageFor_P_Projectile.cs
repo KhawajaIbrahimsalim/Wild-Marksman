@@ -15,6 +15,12 @@ public class DamageFor_P_Projectile : MonoBehaviour
     private bool IsDead = false;
     private GameObject Enemy;
     private ParticleSystem DeathParticle;
+    private GameObject Audio_Source;
+
+    private void Start()
+    {
+        Audio_Source = GameObject.Find("Audio Source");
+    }
 
     private void Update()
     {
@@ -59,6 +65,10 @@ public class DamageFor_P_Projectile : MonoBehaviour
 
             if (other.gameObject.GetComponent<EnemyFollow>().EnemyHealth <= 0)
             {
+                // Play Audio
+                Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().DestroyAudio);
+
+                // Then Camera Shake
                 CameraShake();
 
                 Enemy = other.gameObject;

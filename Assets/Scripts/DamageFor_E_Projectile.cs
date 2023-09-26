@@ -11,8 +11,14 @@ public class DamageFor_E_Projectile : MonoBehaviour
     [SerializeField] private ParticleSystem DeathParticle;
 
     private bool IsHit = false;
-    private bool IsDead = false;   
+    private bool IsDead = false;
     private GameObject Player;
+    private GameObject Audio_Source;
+
+    private void Start()
+    {
+        Audio_Source = GameObject.Find("Audio Source");
+    }
 
     private void Update()
     {
@@ -68,13 +74,22 @@ public class DamageFor_E_Projectile : MonoBehaviour
 
             if (other.gameObject.GetComponent<PlayerMovement>().PlayerHealth <= 0)
             {
+                // Play Audio
+                Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().DestroyAudio);
+
+                // Then Camera Shake
                 CameraShake(2f, 2f);
 
+                // Then Destroy in Update()
                 IsDead = true;
             }
 
             if (CompareTag("Boss_Special Attack"))
             {
+                // Play Audio
+                Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().SifiAudio);
+
+                // Then Camera Shake
                 CameraShake(4f, 4f);
             }
 

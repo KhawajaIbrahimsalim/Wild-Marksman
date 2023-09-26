@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 4967
+  controlID: 6125
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 4968
+  controlID: 6126
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 4969
+  controlID: 6127
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,9 +204,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 00c8ffff
-      m_LastClickedID: -14336
-      m_ExpandedIDs: 4cc8ffff8ac8ffff36c9fffff2d2ffff88d6ffffdef5ffffe4faffffec7d0000767e0000588500007885000086850000648a0000
+      m_SelectedIDs: 0ca60000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5a21ffff6e25ffffbe28ffff922cffffe62fffffbe33ffff7c37ffffa83cffffd04bffffbc6dffffb274ffff387affffbe7ffffff684ffff2899ffff50a5ffff0ab1ffffcabcfffff6c1ffffb4c7ffff6ac8ffff6ad0ffff80d5ffff32dbffff54e0fffffaf1ffffe4faffffaa8300007a85000084850000b0870000ba8700006e890000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -653,9 +653,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 590.1842, y: 281.63226, z: 0.6898696}
+    m_Target: {x: 217.94098, y: 112.7429, z: 1.2387588}
     speed: 2
-    m_Value: {x: 597.69934, y: 282.76407, z: 0.5327762}
+    m_Value: {x: 217.94098, y: 112.7429, z: 1.2387588}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -705,9 +705,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 333.38882
+    m_Target: 92.92733
     speed: 2
-    m_Value: 349.09824
+    m_Value: 92.92733
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Audio and Sound
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1019,16 +1019,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 57
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Audio and Sound
   m_LastFoldersGridSize: 57
   m_LastProjectPath: U:\Make Games\Wild-Marksman
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 182}
-    m_SelectedIDs: c27d0000
-    m_LastClickedID: 32194
-    m_ExpandedIDs: 000000007e7d0000807d0000827d0000847d000000ca9a3b
+    scrollPos: {x: 0, y: 44}
+    m_SelectedIDs: aa7d0000
+    m_LastClickedID: 32170
+    m_ExpandedIDs: 000000007e7d0000807d0000827d0000847d0000be7d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1056,7 +1056,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000007e7d0000807d0000827d0000847d000000ca9a3b
+    m_ExpandedIDs: 000000007e7d0000807d0000827d0000847d0000be7d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1081,9 +1081,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 00c8ffff
-    m_LastClickedInstanceID: -14336
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 0ca60000
+    m_LastClickedInstanceID: 42508
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000826a000022720000000000005698000078780000ae600100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1133,9 +1133,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 478
+    y: 467
     width: 988
-    height: 209
+    height: 220
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 101744
+  m_LastSelectedObjectID: -57574
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52

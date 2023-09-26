@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3668029533100220604}
   - component: {fileID: 3668029533100220607}
   - component: {fileID: 3668029533100220610}
+  - component: {fileID: 7526357401350140767}
+  - component: {fileID: 9159490864071646450}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -27,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3668029533240524099}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 179.9784, y: 87.6452, z: -8.257504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3668029533240524102
 MonoBehaviour:
@@ -47,10 +49,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c656e53cf8f5d64a86d96c279cd04ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 7193616620108418744, guid: 8e73f3ef0654e044b869202a0f9d8d95, type: 3}
+  Enemy: {fileID: 772700874281154738, guid: 07457f28117d2d149a177055a02c7762, type: 3}
   SpawnDelay: 1
   SpawnPos: 300
-  SpawnLimit: 30
+  SpawnLimit: 35
   SpawnCount: 0
 --- !u!114 &3668029533100220604
 MonoBehaviour:
@@ -67,8 +69,8 @@ MonoBehaviour:
   Void: {fileID: 346128225971854973, guid: 3095bf65c5ea89447aef6b7d8a4d63dc, type: 3}
   SpawnPos: 450
   BackGround_SR: {fileID: 0}
-  SpawnLimit: 5
-  Void_Destroy_Distance: 1000
+  SpawnLimit: 3
+  Void_Destroy_Distance: 700
   _void: []
 --- !u!114 &3668029533100220607
 MonoBehaviour:
@@ -97,16 +99,100 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaveLimit: 2
-  WaveCount: 1
   Wave_txt: {fileID: 0}
   WaveTextShow_Delay: 5
-  WaveTime: 30
+  WaveTime: 120
   Time_txt: {fileID: 0}
   Credit_txt: {fileID: 0}
+  Credit: 0
   UpgradeTime: 10
   GetReady_txt: {fileID: 0}
   UpgradeOptions_Panel: {fileID: 0}
-  GameController: {fileID: 3668029533240524099}
   Boss: {fileID: 0}
   BossHealthBar: {fileID: 0}
-  PlayerHealthBar: {fileID: 0}
+  Panel: {fileID: 0}
+  NextLevel_btn: {fileID: 0}
+  Retry_btn: {fileID: 0}
+  PauseGame_Panel: {fileID: 0}
+  P_SpecialAttack_btn: {fileID: 0}
+  ShieldActive_Delay_txt: {fileID: 0}
+  DamageIncreaseActive_Delay_txt: {fileID: 0}
+  TotalPoints: 0
+  EnemyPoints: 0
+  BossPoints: 0
+  PointsPanel: {fileID: 0}
+  LevelSuccessStatus_txt: {fileID: 0}
+  TotalPointsNum_txt: {fileID: 0}
+  EnemyPointsNum_txt: {fileID: 0}
+  BossPointsNum_txt: {fileID: 0}
+  P_SimpleProjectile: {fileID: 4942571654840727621, guid: d5fecac6568a1b945b075ab963779b97, type: 3}
+  DefaultValue_1: 2
+  P_SpecialProjectile: {fileID: 2561763184745782159, guid: e2bc281776b75f5498860e68bcfe2b6d, type: 3}
+  DefaultValue_2: 10
+  RequiredKills: 30
+  NoOfKills: 0
+  KillsNeeded_txt: {fileID: 0}
+  joystick_Shoot: {fileID: 0}
+  joystick_Move: {fileID: 0}
+  joystick_Shoot_Handle: {fileID: 0}
+  joystick_Move_Handle: {fileID: 0}
+--- !u!114 &7526357401350140767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f018b4d873c32f4386be248be6785ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AT_UpgradeSticks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  MH_UpgradeSticks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  H_UpgradeSticks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  P_SimpleProjectile: {fileID: 4942571654840727621, guid: d5fecac6568a1b945b075ab963779b97, type: 3}
+  P_SpecialProjectile: {fileID: 2561763184745782159, guid: e2bc281776b75f5498860e68bcfe2b6d, type: 3}
+  AT_Count: 0
+  MH_Count: 0
+  H_Count: 0
+  P_SimpleATTACK_UP: 2
+  P_SpecialATTACK_UP: 5
+  MaxHealth_UP: 100
+  HealPercentage: 40
+  Credit_txt: {fileID: 0}
+  NotEnoughCredit: {fileID: 0}
+  NotEnoughCredit_Delay: 3
+--- !u!114 &9159490864071646450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668029533240524099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5e4780da8374fd468a2998d3ff9e8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PickUpItems:
+  - {fileID: 188354234280763129, guid: 67b49ae27bedba34596ebcfe02cc657c, type: 3}
+  - {fileID: 2239442402309231103, guid: 053519220bfb54045a2b5cb1ce44ad5f, type: 3}
+  SpawnPos: 300
+  SpawnDelay: 10
+  PickUp_Destroy_Distance: 1000

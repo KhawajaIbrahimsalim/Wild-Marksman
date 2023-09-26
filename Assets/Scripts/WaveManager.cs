@@ -434,6 +434,7 @@ public class WaveManager : MonoBehaviour
         // Enable Retry_btn
         Retry_btn.SetActive(true);
 
+        if (NextLevel_btn)
         // Disable NextLevel_btn
         NextLevel_btn.SetActive(false);
 
@@ -504,6 +505,7 @@ public class WaveManager : MonoBehaviour
         // Enable PointsPanel
         PointsPanel.SetActive(true);
 
+        if (NextLevel_btn)
         // Enable NextLevel_btn
         NextLevel_btn.SetActive(true);
 

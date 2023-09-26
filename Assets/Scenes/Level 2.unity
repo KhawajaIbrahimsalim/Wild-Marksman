@@ -334,11 +334,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6829794629888263131, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
   m_PrefabInstance: {fileID: 7936523814358485923}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &834011229 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7936523814655101950, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
-  m_PrefabInstance: {fileID: 7936523814358485923}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935656998 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 605419659706578692, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
@@ -406,6 +401,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1524092540
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 684243370861268519, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 58ee6b80716c882438941a43e3c3ef14, type: 3}
+    - target: {fileID: 1676628686936832891, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_Name
+      value: Audio Source
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.521748
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33.377518
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1265186
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380815618689546391, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5948432195258251289, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+      propertyPath: LaserShootAudio
+      value: 
+      objectReference: {fileID: 1524092547}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+--- !u!1 &1524092541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676628686936832891, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+  m_PrefabInstance: {fileID: 1524092540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1524092547 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7342428550244883181, guid: eb8e52483660afd4aa2a8169af00ccca, type: 3}
+  m_PrefabInstance: {fileID: 1524092540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1673213273 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1673213273, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
@@ -617,17 +687,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1840815688 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1840815688, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
-  m_PrefabInstance: {fileID: 7936523814358485923}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1840815690 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1840815690, guid: 5b9575fd703368b4484297bc579617b0, type: 3}
   m_PrefabInstance: {fileID: 7936523814358485923}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840815688}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -777,29 +842,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3668029533100220604, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: SpawnPos
-      value: 450
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220604, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220604, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: SpawnLimit
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220604, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: BackGround_SR
       value: 
       objectReference: {fileID: 2588255189885667854}
-    - target: {fileID: 3668029533100220604, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: Void_Destroy_Distance
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220607, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: DistanceLimit
-      value: 1200
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Boss
       value: 
@@ -809,17 +854,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 382338684}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: Canvas
-      value: 
-      objectReference: {fileID: 834011229}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Time_txt
       value: 
       objectReference: {fileID: 1687031454}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: WaveTime
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Wave_txt
       value: 
@@ -829,10 +866,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1673213273}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: WaveLimit
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Credit_txt
       value: 
       objectReference: {fileID: 1699084305}
@@ -840,10 +873,6 @@ PrefabInstance:
       propertyPath: PointsPanel
       value: 
       objectReference: {fileID: 662944581}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: UpgradeTime
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: GetReady_txt
       value: 
@@ -857,25 +886,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 760423144}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: PointsNum_txt
-      value: 
-      objectReference: {fileID: 390619405}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: RequiredKills
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: joystick_Move
       value: 
       objectReference: {fileID: 178891081}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: DefaultValue_1
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: DefaultValue_2
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: joystick_Shoot
       value: 
@@ -889,10 +902,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 502933978}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: PlayerHealthBar
-      value: 
-      objectReference: {fileID: 1840815688}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: BossPointsNum_txt
       value: 
       objectReference: {fileID: 695672609}
@@ -901,10 +910,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2002299681}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: P_SimpleProjectile
-      value: 
-      objectReference: {fileID: 4942571654840727621, guid: d5fecac6568a1b945b075ab963779b97, type: 3}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: TotalPointsNum_txt
       value: 
       objectReference: {fileID: 390619405}
@@ -912,10 +917,6 @@ PrefabInstance:
       propertyPath: P_SpecialAttack_btn
       value: 
       objectReference: {fileID: 2100991002}
-    - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: P_SpecialProjectile
-      value: 
-      objectReference: {fileID: 2561763184745782159, guid: e2bc281776b75f5498860e68bcfe2b6d, type: 3}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: UpgradeOptions_Panel
       value: 
@@ -940,10 +941,6 @@ PrefabInstance:
       propertyPath: DamageIncreaseActive_Delay_txt
       value: 
       objectReference: {fileID: 391964577}
-    - target: {fileID: 3668029533240524097, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533240524097, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: m_LocalPosition.x
       value: 179.9784
@@ -988,102 +985,94 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 3668029533240524099, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3668029533240524102, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Enemy
       value: 
       objectReference: {fileID: 772700874281154738, guid: 07457f28117d2d149a177055a02c7762, type: 3}
-    - target: {fileID: 3668029533240524102, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533240524102, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: SpawnDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668029533240524102, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      propertyPath: SpawnLimit
-      value: 35
-      objectReference: {fileID: 0}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: Credit_txt
+      value: 
+      objectReference: {fileID: 1699084305}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: NotEnoughCredit
+      value: 
+      objectReference: {fileID: 1695391794}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: H_UpgradeSticks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1975810156}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: H_UpgradeSticks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1676310903}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: H_UpgradeSticks.Array.data[2]
+      value: 
+      objectReference: {fileID: 935656998}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: H_UpgradeSticks.Array.data[3]
+      value: 
+      objectReference: {fileID: 507874458}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: H_UpgradeSticks.Array.data[4]
+      value: 
+      objectReference: {fileID: 668347859}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: AT_UpgradeSticks.Array.data[0]
+      value: 
+      objectReference: {fileID: 315931489}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: AT_UpgradeSticks.Array.data[1]
+      value: 
+      objectReference: {fileID: 7936523814358485927}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: AT_UpgradeSticks.Array.data[2]
+      value: 
+      objectReference: {fileID: 7936523814358485926}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: AT_UpgradeSticks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1127403544}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: AT_UpgradeSticks.Array.data[4]
+      value: 
+      objectReference: {fileID: 1322541926}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: MH_UpgradeSticks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1352880629}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: MH_UpgradeSticks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1899946515}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: MH_UpgradeSticks.Array.data[2]
+      value: 
+      objectReference: {fileID: 246464591}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: MH_UpgradeSticks.Array.data[3]
+      value: 
+      objectReference: {fileID: 1321374575}
+    - target: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: MH_UpgradeSticks.Array.data[4]
+      value: 
+      objectReference: {fileID: 833749440}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3668029533240524099, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3668029533100220604}
-    - targetCorrespondingSourceObject: {fileID: 3668029533240524099, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3668029533100220610}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
---- !u!1 &3668029533100220603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3668029533240524099, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+--- !u!114 &3668029533100220604 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7526357401350140767, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
   m_PrefabInstance: {fileID: 3668029533100220602}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3668029533100220604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3668029533100220603}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f018b4d873c32f4386be248be6785ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AT_UpgradeSticks:
-  - {fileID: 315931489}
-  - {fileID: 7936523814358485927}
-  - {fileID: 7936523814358485926}
-  - {fileID: 1127403544}
-  - {fileID: 1322541926}
-  MH_UpgradeSticks:
-  - {fileID: 1352880629}
-  - {fileID: 1899946515}
-  - {fileID: 246464591}
-  - {fileID: 1321374575}
-  - {fileID: 833749440}
-  H_UpgradeSticks:
-  - {fileID: 1975810156}
-  - {fileID: 1676310903}
-  - {fileID: 935656998}
-  - {fileID: 507874458}
-  - {fileID: 668347859}
-  P_SimpleProjectile: {fileID: 4942571654840727621, guid: d5fecac6568a1b945b075ab963779b97, type: 3}
-  P_SpecialProjectile: {fileID: 2561763184745782159, guid: e2bc281776b75f5498860e68bcfe2b6d, type: 3}
-  AT_Count: 0
-  MH_Count: 0
-  H_Count: 0
-  P_SimpleATTACK_UP: 2
-  P_SpecialATTACK_UP: 5
-  MaxHealth_UP: 100
-  HealPercentage: 40
-  Credit_txt: {fileID: 1699084305}
-  NotEnoughCredit: {fileID: 1695391794}
-  NotEnoughCredit_Delay: 3
---- !u!114 &3668029533100220610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3668029533100220603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5e4780da8374fd468a2998d3ff9e8fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PickUpItems:
-  - {fileID: 188354234280763129, guid: 67b49ae27bedba34596ebcfe02cc657c, type: 3}
-  - {fileID: 2239442402309231103, guid: 053519220bfb54045a2b5cb1ce44ad5f, type: 3}
-  SpawnPos: 150
-  SpawnDelay: 10
-  PickUp_Destroy_Distance: 1000
 --- !u!1001 &5617001141999899771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1104,6 +1093,10 @@ PrefabInstance:
       propertyPath: joystick
       value: 
       objectReference: {fileID: 1367724719}
+    - target: {fileID: 463163182, guid: 488d47573885e914b8a90e11d69e8548, type: 3}
+      propertyPath: Audio_Source
+      value: 
+      objectReference: {fileID: 1524092541}
     - target: {fileID: 463163182, guid: 488d47573885e914b8a90e11d69e8548, type: 3}
       propertyPath: joystick_Shoot_Handle
       value: 
@@ -1286,7 +1279,7 @@ PrefabInstance:
       objectReference: {fileID: 1840815690}
     - target: {fileID: 7193616619638728648, guid: 488d47573885e914b8a90e11d69e8548, type: 3}
       propertyPath: PlayerMaxHealth
-      value: 10000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7193616619638728648, guid: 488d47573885e914b8a90e11d69e8548, type: 3}
       propertyPath: joystick_Move_Handle
@@ -1716,3 +1709,4 @@ SceneRoots:
   - {fileID: 6122477946472709116}
   - {fileID: 7936523814358485923}
   - {fileID: 1838243080}
+  - {fileID: 1524092540}

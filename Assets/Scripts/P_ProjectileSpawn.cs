@@ -14,12 +14,15 @@ public class P_ProjectileSpawn : MonoBehaviour
     [SerializeField] private float DelayFor_SimpleAttack;
     [SerializeField] private RectTransform joystick_Shoot_Handle;
 
+    private GameObject Audio_Source;
     private float DelayFor_SpecialAttack_temp;
     private float DelayFor_SimpleAttack_temp;
     private bool IsPressed = false;
     // Start is called before the first frame update
     void Start()
     {
+        Audio_Source = GameObject.Find("Audio Source");
+
         DelayFor_SpecialAttack_temp = DelayFor_SpecialAttack;
 
         DelayFor_SimpleAttack_temp = DelayFor_SimpleAttack;
@@ -94,11 +97,17 @@ public class P_ProjectileSpawn : MonoBehaviour
 
     void SimpleShoot()
     {
+        // Play Audio
+        Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().ShootAudio);
+
         Instantiate<GameObject>(P_SimpleProjectile, Projectile_SpawnPoint.transform.position, transform.rotation);
     }
 
     void SpecialAttack()
     {
+        // Play Audio
+        Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().LaserShootAudio);
+
         Instantiate<GameObject>(SpecialProjectile, Projectile_SpawnPoint.transform.position, transform.rotation);
     }
 
