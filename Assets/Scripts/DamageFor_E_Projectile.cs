@@ -26,6 +26,9 @@ public class DamageFor_E_Projectile : MonoBehaviour
         {
             if (CompareTag("Boss Impact Attack"))
             {
+                // Play Audio
+                Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().ElectroLaserAudio);
+
                 // Instantiate the  Hit Particle
                 ParticleSystem hitParticle = Instantiate(HitParticle, Player.transform.position, Player.transform.rotation);
 
@@ -68,7 +71,11 @@ public class DamageFor_E_Projectile : MonoBehaviour
         // For E_Projectile to damage the Player
         if (other.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<PlayerMovement>().PlayerHealth -= ProjectileDamage;
+            // if Shield is ON then don't deduct the players health
+            if (other.gameObject.GetComponent<PickUpItemSetUp>().IsShieldActive == false)
+            {
+                other.gameObject.GetComponent<PlayerMovement>().PlayerHealth -= ProjectileDamage;
+            }
 
             Player = other.gameObject;
 

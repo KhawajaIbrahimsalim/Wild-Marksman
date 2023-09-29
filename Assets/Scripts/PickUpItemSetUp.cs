@@ -13,8 +13,6 @@ public class PickUpItemSetUp : MonoBehaviour
     [HideInInspector] public GameObject Shield;
     [HideInInspector] public float Temp_ShieldActive_Delay;
 
-    private float Player_Health;
-
     [Header("Damage Increase (Pick-up item) Properties:")]
     public float DamageIncreaseActive_Delay;
     [SerializeField] private float IncreasedTimesDamage;
@@ -31,13 +29,12 @@ public class PickUpItemSetUp : MonoBehaviour
     [HideInInspector] public float P_SpecialProjectile_Damage;
 
     private bool IsDelayStarted;
+    [HideInInspector] public bool IsShieldActive = false;
 
     private void Start()
     {
         Temp_ShieldActive_Delay = ShieldActive_Delay;
         Temp_DamageIncreaseActive_Delay = DamageIncreaseActive_Delay;
-
-        Player_Health = 0;
 
         IsDelayStarted = true;
     }
@@ -51,7 +48,7 @@ public class PickUpItemSetUp : MonoBehaviour
         // For Shield Pick-up item
         if (Shield != null)
         {
-            GetComponent<PlayerMovement>().PlayerHealth = Player_Health;
+            IsShieldActive = true;
 
             ShieldActive_Delay -= Time.deltaTime;
 
@@ -75,6 +72,8 @@ public class PickUpItemSetUp : MonoBehaviour
             {
                 // Destroy Shield
                 Destroy(Shield);
+
+                IsShieldActive = false;
 
                 // Refill ShieldActive_Delay
                 ShieldActive_Delay = Temp_ShieldActive_Delay;
@@ -152,9 +151,6 @@ public class PickUpItemSetUp : MonoBehaviour
     {
         if (collision.CompareTag("PickUp"))
         {
-            // Set Last Player Health before Shield Pick up
-            Player_Health = GetComponent<PlayerMovement>().PlayerHealth;
-
             // As Player Collides with Pick-up items it destroys the Pick-up item
             Destroy(collision.gameObject);
         }

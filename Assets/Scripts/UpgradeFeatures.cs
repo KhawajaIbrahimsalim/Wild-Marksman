@@ -13,6 +13,7 @@ public class UpgradeFeatures : MonoBehaviour
     [SerializeField] private int AT_Count;
     [SerializeField] private int MH_Count;
     [SerializeField] private int H_Count;
+    [SerializeField] private GameObject Upgradepanel;
 
     [Header("Upgrade Values:")]
     [SerializeField] private float P_SimpleATTACK_UP;
@@ -34,6 +35,14 @@ public class UpgradeFeatures : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+
+        Upgradepanel.SetActive(true);
+
+        AT_UpgradeSticks = GameObject.FindGameObjectsWithTag("AT");
+        MH_UpgradeSticks = GameObject.FindGameObjectsWithTag("MH");
+        H_UpgradeSticks = GameObject.FindGameObjectsWithTag("H");
+
+        Upgradepanel.SetActive(false);
 
         Temp_NotEnoughCredit_Delay = NotEnoughCredit_Delay;
     }

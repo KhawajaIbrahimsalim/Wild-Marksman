@@ -9,13 +9,20 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private GameObject LoadingPanel;
     [SerializeField] private GameObject Panel;
 
+    private GameObject Audio_Source;
+
     private void Start()
     {
+        Audio_Source = GameObject.Find("Audio Source");
+
         Time.timeScale = 1f;
     }
 
     public void Play()
     {
+        // Play Audio
+        PlayUIAudio();
+
         StartCoroutine(PlayLoad());
     }
 
@@ -32,31 +39,49 @@ public class SceneLoader : MonoBehaviour
 
     public void Levels()
     {
+        // Play Audio
+        PlayUIAudio();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Quit()
     {
+        // Play Audio
+        PlayUIAudio();
+
         Application.Quit();
     }
 
     public void ToMenu()
     {
+        // Play Audio
+        PlayUIAudio();
+
         SceneManager.LoadScene(0);
     }
 
     public void NextLevel()
     {
+        // Play Audio
+        PlayUIAudio();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Retry()
     {
+        // Play Audio
+        PlayUIAudio();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Back()
     {
+        // Play Audio
+        PlayUIAudio();
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
@@ -131,5 +156,11 @@ public class SceneLoader : MonoBehaviour
         yield return new WaitForSeconds(LoadingDelay);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 5);
+    }
+
+    private void PlayUIAudio()
+    {
+        // Play Audio
+        Audio_Source.GetComponent<AudioController>().PlayAudio(Audio_Source.GetComponent<AudioController>().UI_Button_Audio);
     }
 }

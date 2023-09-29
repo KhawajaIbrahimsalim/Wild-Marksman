@@ -98,8 +98,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.3289, y: 0.0024000406, z: 0}
-    m_Extent: {x: 1.2777001, y: 1.3951, z: 0}
+    m_Center: {x: 0.3312, y: 0.0034499764, z: 0}
+    m_Extent: {x: 1.276, y: 1.40065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -311,6 +311,7 @@ MonoBehaviour:
   VoidSpeed: 2600
   AttractionSpeed: 0.01
   UpgradePanel: {fileID: 0}
+  TutorialPanel: {fileID: 0}
 --- !u!114 &463163180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +347,7 @@ MonoBehaviour:
   joystick: {fileID: 0}
   DelayFor_SimpleAttack: 0.2
   joystick_Shoot_Handle: {fileID: 0}
+  TutorialPanel: {fileID: 0}
 --- !u!114 &1074560494
 MonoBehaviour:
   m_ObjectHideFlags: 0

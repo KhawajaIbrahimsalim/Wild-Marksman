@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShieldActivate : MonoBehaviour
@@ -32,11 +30,8 @@ public class ShieldActivate : MonoBehaviour
                 // Set Parent of _Shield
                 _shield.transform.parent = Player.transform;
 
-                // Set Rotation
-                _shield.transform.localRotation = new Quaternion(0, 0, 0, 0);
-
-                // Set Position
-                _shield.transform.localPosition = new Vector3(0, 0, 0);
+                // Set Local position as ZERO to locate directly onto the Player AND set local rotation to ZERO
+                _shield.transform.SetLocalPositionAndRotation(new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
             }
         }
     }

@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b772f9cd9d7ad46bbade29bac9811e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyHealth: 400
+  EnemyHealth: 1000
   BossHealthBar: {fileID: 0}
   E_SimpleProjectile: {fileID: 0}
   E_ProjectileSpawnPoint: []

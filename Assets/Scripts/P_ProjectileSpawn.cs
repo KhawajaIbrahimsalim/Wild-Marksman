@@ -14,6 +14,7 @@ public class P_ProjectileSpawn : MonoBehaviour
     [SerializeField] private float DelayFor_SimpleAttack;
     [SerializeField] private RectTransform joystick_Shoot_Handle;
 
+    private GameObject TutorialPanel;
     private GameObject Audio_Source;
     private float DelayFor_SpecialAttack_temp;
     private float DelayFor_SimpleAttack_temp;
@@ -23,12 +24,15 @@ public class P_ProjectileSpawn : MonoBehaviour
     {
         Audio_Source = GameObject.Find("Audio Source");
 
+        TutorialPanel = GameObject.Find("Tutorial Panel");
+
         DelayFor_SpecialAttack_temp = DelayFor_SpecialAttack;
 
         DelayFor_SimpleAttack_temp = DelayFor_SimpleAttack;
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         float shootHorizontal = joystick.Horizontal;
@@ -47,6 +51,11 @@ public class P_ProjectileSpawn : MonoBehaviour
         {
             if (shootHorizontal != 0.0f || shootVertical != 0.0f && P_SimpleProjectile != null)
             {
+                if (TutorialPanel.active) // When Player Shoot Disable the tutorial Panel
+                {
+                    TutorialPanel.SetActive(false);
+                }
+
                 if (DelayFor_SimpleAttack <= 0.0f)
                 {
                     SimpleShoot();
@@ -76,6 +85,11 @@ public class P_ProjectileSpawn : MonoBehaviour
 
         else if (IsPressed /* || Input.GetKey("mouse 1")*/)
         {
+            if (TutorialPanel.active) // When Player Shoot Disable the tutorial Panel
+            {
+                TutorialPanel.SetActive(false);
+            }
+
             DelayFor_SpecialAttack -= Time.deltaTime;
 
             // When Special Attack Animation STARTS

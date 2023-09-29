@@ -19,9 +19,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float VoidSpeed;
     [SerializeField] private float AttractionSpeed;
 
-    [Header("Wave Manager:")]
+    [Header("UI Properties:")]
     [SerializeField] private GameObject UpgradePanel;
 
+    private GameObject TutorialPanel;
     private GameObject Void;
     private float Temp_Movespeed;
     private bool IsNearVoid;
@@ -40,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1;
 
         GameController = GameObject.Find("GameController");
+
+        TutorialPanel = GameObject.Find("Tutorial Panel");
     }
 
     [System.Obsolete]
@@ -66,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
 
         else if (joystick_Move_Handle.localPosition != new Vector3(0, 0, 0))
         {
+            if (TutorialPanel.active) // When Player moves Disable the tutorial Panel
+            {
+                TutorialPanel.SetActive(false);
+            }
+
             Temp_Sped = 1;
         }
 
