@@ -960,7 +960,7 @@ PrefabInstance:
       objectReference: {fileID: 1673213273}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: WaveLimit
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3668029533100220610, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
       propertyPath: Credit_txt
@@ -1198,6 +1198,10 @@ PrefabInstance:
       propertyPath: NotEnoughCredit
       value: 
       objectReference: {fileID: 1695391794}
+    - target: {fileID: 9159490864071646450, guid: 3fe3e81d6209112448c27bee822123ad, type: 3}
+      propertyPath: SpawnPos
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
